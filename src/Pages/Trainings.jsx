@@ -14,7 +14,7 @@ export const Trainings = () => {
     const [data, setData] = useState([])
 
     useEffect(() => {
-        fetch('https://customerrest.herokuapp.com/gettrainings',
+        fetch(process.env.REACT_APP_TRAININGS_URL,
             {
                 method: 'GET',
                 headers: {
@@ -29,14 +29,13 @@ export const Trainings = () => {
                     throw new Error(response.status);
                 }
             }).then(responseData => {
-                console.log(responseData)
                 setData(responseData)
             }).catch(err => console.error(err))
     }, [])
 
     return (
         <>
-            <Table data={data} cols={columns} filterChoice='activity' />
+            <Table data={data} cols={columns} filterChoice='activity' filterLabel={'Filter by Activity'} />
         </>
     )
 }

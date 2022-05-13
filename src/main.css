@@ -1,4 +1,4 @@
-@import './Styles/App.css';
+@import './Styles/global.layout.css';
 
 @import './Styles/index.css';
 
@@ -10,4 +10,6 @@
 
 @import './Styles/grid.layout.css';
 
-@import './Styles/flex.layout.css'
+@import './Styles/flex.layout.css';
+
+@import './Styles/pages.layout.css';

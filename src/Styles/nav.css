@@ -1,15 +1,13 @@
 .nav__wrapper {
     display: flex;
-    width: 50%;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
     margin: 0 auto;
+    padding: 1rem;
 }
 
 .col-nav__wrapper{
     display: flex;
     flex-direction: column;
     margin: 0 auto;
-    align-items: center;
-    justify-content: center;
 }

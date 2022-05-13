@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Table } from '../Components/List';
 
+
 const columns = [
     { name: 'Full name', selector: row => row.firstname + ' ' + row.lastname, sortable: true, },
     { name: 'Email address', selector: row => row.email },
@@ -17,7 +18,7 @@ export const Customers = () => {
     const [data, setData] = useState([])
 
     useEffect(() => {
-        fetch('https://customerrest.herokuapp.com/api/customers',
+        fetch(process.env.REACT_APP_CUSTOMERS_URL,
             {
                 method: 'GET',
                 headers: {
@@ -39,7 +40,7 @@ export const Customers = () => {
 
     return (
         <>
-            <Table data={data} cols={columns} filterChoice='firstname' className='table'/>
+            <Table data={data} cols={columns} filterChoice='firstname' className='table' filterLabel={'Filter by Name'}/>
         </>
     )
 

@@ -7,7 +7,6 @@ import { Home } from './Pages/Home'
 import { Customers } from './Pages/Customers'
 import { Trainings } from './Pages/Trainings'
 
-
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>

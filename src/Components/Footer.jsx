@@ -1,16 +1,18 @@
 import {ColNav} from './Nav'
 
+
 export const Footer = () => {
 
     return (
         <>
-            <footer className="footer__wrapper grid3x3">
-                <div className="footer__section">Created by
-                    <div className="footer__content"> Shannon Schrauwen</div>
+            <footer className="footer__wrapper grid3x1">
+                <div className="footer__section flexMarginAuto">
+                    <div className="footer__content"> Created by Shannon Schrauwen</div>
                     <div className="footer__content">In association with Haaga-Helia polytechnic university Front end development course</div>
                     <div className="footer__content">Created in React</div>
                 </div>
-                <div className="footer__section">Packages used in the creation of this website
+                <div className="footer__section flexMarginAuto">
+                    <div className="footer__section--header">Packages used in the creation of this website</div>
                     <div className="footer__content">
                         <a href="https://react-data-table-component.netlify.app/?path=/story/getting-started-intro--page"
                             className="footer__link" target='_blank' rel="noreferrer">
@@ -30,7 +32,7 @@ export const Footer = () => {
                         </a>
                     </div>
                 </div>
-                <div className="footer__section">Menu links
+                <div className="footer__section flexMarginAuto">
                     <ColNav />
                 </div>
             </footer>

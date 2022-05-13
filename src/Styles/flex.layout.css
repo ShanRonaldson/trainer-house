@@ -6,3 +6,19 @@
     display: flex;
     flex-direction: column;
 }
+
+.flexJCC{
+    justify-content: center;
+}
+
+.flexSB{
+    justify-content: space-between;
+}
+
+.flexAC{
+    align-items: center;
+}
+
+.flexMarginAuto{
+    margin: 0 auto;
+}

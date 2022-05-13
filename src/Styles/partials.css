@@ -3,6 +3,7 @@
 .header__wrapper{
     display: flex;
     justify-content: center;
+    margin:  0 4rem;
 }
 
 .header__title{
@@ -11,8 +12,24 @@
 
 .header__logo{
     flex: 0 1;
+    width: 5rem;
+    height: 5rem;
 }
 
 .footer__wrapper{
-    flex-shrink: 0;
+    font-size: x-small;
+}
+
+.footer__section{
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+}
+
+.footer__section--header{
+    text-decoration: underline;
+}
+
+.footer__content{
+    
 }
