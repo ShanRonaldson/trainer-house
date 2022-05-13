@@ -1,3 +1,4 @@
+import sunflower from './../imgs/sunflower.png'
 
 export const Home = () => {
 
@@ -10,7 +11,7 @@ export const Home = () => {
                 Click the links above to see our customers and trainings available
             </div>
             <div>
-                <img src='/sunflower.png' alt="logo" />
+                <img src={sunflower} alt="logo" className='logo__large' />
             </div>
         </div>
     )

@@ -1,12 +1,28 @@
 * {
-    box-sizing: border-box;
-  }
-
-html, body{
-    margin: 0;
+  box-sizing: border-box;
 }
 
-a, a:link, a:hover, a:visited, a:active, a:focus{
-text-decoration: none;
-color:inherit;
+html,
+body {
+  margin: 0;
+}
+
+a,
+a:link,
+a:hover,
+a:visited,
+a:active,
+a:focus {
+  text-decoration: none;
+  color: inherit;
+}
+
+.logo {
+  width: 5rem;
+  padding: 5px
+}
+
+.logo__large {
+  width: 15rem;
+  margin: 5rem;
 }

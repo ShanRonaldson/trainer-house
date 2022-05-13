@@ -1,31 +1,29 @@
-
-
-.header__wrapper{
+.header__wrapper {
     display: flex;
     justify-content: center;
-    margin:  0 4rem;
+    margin: 0 4rem;
 }
 
-.header__title{
+.header__title {
     flex: 1 0;
 }
 
-.header__logo{
+.header__logo {
     flex: 0 1;
     width: 5rem;
     height: 5rem;
 }
 
-.footer__wrapper{
+.footer__wrapper {
     font-size: x-small;
 }
 
-.footer__section{
+.footer__section {
     display: flex;
     flex-direction: column;
     padding: 1rem;
 }
 
-.footer__section--header{
+.footer__section--header {
     text-decoration: underline;
 }
