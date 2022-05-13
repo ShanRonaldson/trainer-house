@@ -5,7 +5,7 @@ export const Header = () => {
     return (
         <>
             <div className="header__wrapper">
-                <h1 className="header__title">Trainer House</h1>
+                <h1 className="header__title">Beautiful Sunflower Athletic House</h1>
                 <div className="header__logo">
                     <img src={sunflower} alt="logo" className="logo" />
                     <div hidden>
