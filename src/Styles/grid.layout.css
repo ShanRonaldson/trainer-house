@@ -1,0 +1,19 @@
+.grid3x3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-column-gap: 20px;
+    grid-row-gap: 0px;
+}
+
+.grid3x3 div:first-child {
+    grid-area: 1 / 1 / 6 / 2;
+}
+
+.grid3x2 div:nth-child(2) {
+    grid-area: 1 / 2 / 6 / 3;
+}
+
+.grid3x3 div:last-child {
+    grid-area: 1 / 3 / 6 / 4;
+}

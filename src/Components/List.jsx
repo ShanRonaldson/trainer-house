@@ -1,5 +1,5 @@
 import { useMemo, useState } from 'react';
-import DataTable, { ExpanderComponentProps } from 'react-data-table-component';
+import DataTable from 'react-data-table-component';
 import { CSVLink } from "react-csv";
 import { ArrowDownward } from '@mui/icons-material';
 import { FilterComponent } from './../Methods/Filter'

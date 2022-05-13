@@ -1,0 +1,13 @@
+@import './Styles/App.css';
+
+@import './Styles/index.css';
+
+@import './Styles/nav.css';
+
+@import './Styles/partials.css';
+
+@import './Styles/tables.css';
+
+@import './Styles/grid.layout.css';
+
+@import './Styles/flex.layout.css'

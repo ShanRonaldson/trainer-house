@@ -1,0 +1,18 @@
+
+
+.header__wrapper{
+    display: flex;
+    justify-content: center;
+}
+
+.header__title{
+    flex: 1 0;
+}
+
+.header__logo{
+    flex: 0 1;
+}
+
+.footer__wrapper{
+    flex-shrink: 0;
+}

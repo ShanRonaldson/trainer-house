@@ -15,7 +15,6 @@ const columns = [
 
 export const Customers = () => {
     const [data, setData] = useState([])
-    const [links, setLinks] = useState([])
 
     useEffect(() => {
         fetch('https://customerrest.herokuapp.com/api/customers',
@@ -40,7 +39,7 @@ export const Customers = () => {
 
     return (
         <>
-            <Table data={data} cols={columns} filterChoice='firstname' expandedComponent={links} />
+            <Table data={data} cols={columns} filterChoice='firstname' className='table'/>
         </>
     )
 
