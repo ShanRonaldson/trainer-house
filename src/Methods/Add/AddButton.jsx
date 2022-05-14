@@ -21,7 +21,8 @@ export const AddButton = ({ type, addNew }) => {
                         onClose={() => Swal.close()}
                     />
                 ,
-                showConfirmButton: false
+                showConfirmButton: false,
+                width: 'auto'
             })
         )
     }

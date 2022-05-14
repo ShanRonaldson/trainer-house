@@ -1,9 +1,10 @@
 import { useEffect, useState } from 'react';
+import Swal from 'sweetalert2';
+
 import { Table } from '../Components/List';
 import { IconButton } from '@mui/material';
 import DeleteIcon from '@mui/icons-material/Delete';
-import EditIcon from '@mui/icons-material/Edit';
-import Swal from 'sweetalert2';
+
 
 const moment = require('moment')
 
@@ -17,8 +18,7 @@ export const Trainings = () => {
         { name: 'Date', selector: row => moment(row.date).format('YYYY-MM-DD'), sortable: true, },
         { name: 'Duration', selector: row => row.duration + ' mins', sortable: true, },
         { name: 'Customer', selector: row => row.customer.firstname + ' ' + row.customer.lastname },
-        { name: '', selector: row => <IconButton onClick={() => handleDelete(row)}><DeleteIcon color='error' /> </IconButton> },
-        { name: '', cell: row => <IconButton onClick={() => handleEdit(row)}><EditIcon color='warning' /></IconButton> }
+        { name: '', selector: row => <IconButton onClick={() => handleDelete(row)}><DeleteIcon color='error' /> </IconButton> }
 
     ]
 
@@ -72,11 +72,6 @@ export const Trainings = () => {
                     })
             }
         }))
-    }
-
-    // edit a training
-    const handleEdit = (data) => {
-
     }
 
     // add a training

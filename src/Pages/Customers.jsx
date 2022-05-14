@@ -1,9 +1,10 @@
+import { useEffect, useState } from 'react';
 import { IconButton } from '@mui/material';
 import DeleteIcon from '@mui/icons-material/Delete';
-import EditIcon from '@mui/icons-material/Edit';
-import { useEffect, useState } from 'react';
-import { Table } from '../Components/List';
 import Swal from 'sweetalert2';
+
+import { Table } from '../Components/List';
+import { UpdateButton } from '../Methods/Update/UpdateButton';
 
 export const Customers = () => {
     const [data, setData] = useState([])
@@ -16,8 +17,20 @@ export const Customers = () => {
         { name: 'Address', selector: row => row.streetaddress, sortable: true, },
         { name: 'City', selector: row => row.city, sortable: true, },
         { name: 'Postal code', selector: row => row.postcode, sortable: true, },
-        { name: '', cell: row => <IconButton onClick={() => handleDelete(row)}><DeleteIcon color='error' /> </IconButton> },
-        { name: '', cell: row => <IconButton onClick={() => handleEdit(row)}><EditIcon color='warning' /></IconButton> }
+        {
+            name: '',
+            cell: row =>
+                <IconButton onClick={() => handleDelete(row)}>
+                    <DeleteIcon color='error' />
+                </IconButton>
+        },
+        {
+            name: '', cell: row =>
+                <UpdateButton
+                    updateCust={(updatedCustomer) => handleEdit(updatedCustomer, row)}
+                    data={row}
+                />
+        }
     ]
 
     // get the customers
@@ -72,8 +85,17 @@ export const Customers = () => {
     }
 
     // edit a customer
-    const handleEdit = (data) => {
-
+    const handleEdit = (updatedCustomer, row) => {
+        fetch(row.links[0].href, {
+            method: 'PUT',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(updatedCustomer)
+        })
+            .then(response => {
+                if (response.ok) {
+                    fetchData();
+                }
+            })
     }
 
     // add a customer

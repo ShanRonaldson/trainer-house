@@ -3,9 +3,8 @@ import DataTable from 'react-data-table-component';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 
 import { FilterComponent } from './../Methods/Filter'
-import { Export } from '../Methods/Export';
-import { AddButton } from './AddButton';
-
+import { Export } from './../Methods/Export';
+import { AddButton } from './../Methods/Add/AddButton';
 
 const sortIcon = < KeyboardArrowDownIcon />
 
