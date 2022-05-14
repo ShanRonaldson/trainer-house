@@ -66,16 +66,18 @@ export const AddCustomer = ({ onCancel, onClose, addNew }) => {
                     <Input id="city" required onChange={e => setCity(e.target.value)} />
                 </FormControl>
                 <FormControl>
-                    <InputLabel htmlFor="postcode">Phone number</InputLabel>
+                    <InputLabel htmlFor="postcode">Postal code</InputLabel>
                     <Input id="postcode" required onChange={e => setPostcode(e.target.value)} />
                 </FormControl>
             </div>
 
             <div className="form__actions">
-                <Button type="submit">
+                <Button type="submit" variant="contained" color="success">
                     Submit
                 </Button>
-                <Button onClick={onCancel}> Cancel</Button>
+                <Button onClick={onCancel}  color="warning">
+                    Cancel
+                </Button>
             </div>
 
         </Box>

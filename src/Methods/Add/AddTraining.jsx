@@ -59,12 +59,14 @@ export const AddTraining = ({ onCancel, onClose, addNew }) => {
                 </FormControl>
 
                 <FormControl sx={{ m: 1, minWidth: 80 }}>
-                    <InputLabel htmlFor="selectCust" variant="filled">Customer</InputLabel>
+                    <InputLabel htmlFor="selectCust" >Customer</InputLabel>
                     <Select
                         id="selectCust"
                         name='customer'
                         onChange={e => setCustomer(e.target.value)}
                         value={customer}
+                        autoWidth
+                        label='Customer'
                     >
                         {
                             allCustomers.map((customer, index) => (
@@ -83,16 +85,18 @@ export const AddTraining = ({ onCancel, onClose, addNew }) => {
                 </FormControl>
 
                 <FormControl>
-                    <InputLabel htmlFor="duration">Date</InputLabel>
+                    <InputLabel htmlFor="duration">Duration (in mins)</InputLabel>
                     <Input type="number" id="duration" required onChange={e => setDuration(e.target.value)} />
                 </FormControl>
             </div>
 
             <div className="form__actions">
-                <Button type="submit">
+                <Button type="submit" variant="contained" color="success">
                     Submit
                 </Button>
-                <Button onClick={onCancel}> Cancel</Button>
+                <Button onClick={onCancel} color='warning'>
+                    Cancel
+                </Button>
             </div>
 
         </Box>

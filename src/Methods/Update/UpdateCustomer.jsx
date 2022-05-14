@@ -71,10 +71,12 @@ export const UpdateCustomer = ({ onCancel, onClose, data, updateCust }) => {
             </div>
 
             <div className="form__actions">
-                <Button type="submit">
+                <Button type="submit" variant="contained" color="success">
                     Submit
                 </Button>
-                <Button onClick={onCancel}> Cancel</Button>
+                <Button onClick={onCancel} color="warning">
+                    Cancel
+                </Button>
             </div>
 
         </Box>
