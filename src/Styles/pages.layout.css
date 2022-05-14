@@ -1,3 +1,7 @@
 .home__wrapper{
     text-align: center;
 }
+
+.calendar__wrapper{
+    height: 10rem
+}
