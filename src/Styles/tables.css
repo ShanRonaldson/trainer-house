@@ -1,3 +1,7 @@
 .table{
     flex-grow: 1;
 }
+
+.modal{
+    z-index: 1000;
+}

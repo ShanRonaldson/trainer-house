@@ -1,12 +1,15 @@
 import { useMemo, useState } from 'react';
 import DataTable from 'react-data-table-component';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
+
 import { FilterComponent } from './../Methods/Filter'
 import { Export } from '../Methods/Export';
+import { AddButton } from './AddButton';
+
 
 const sortIcon = < KeyboardArrowDownIcon />
 
-export const Table = ({ data, cols, filterChoice, filterLabel }) => {
+export const Table = ({ data, cols, filterChoice, filterLabel, type, addNew }) => {
 
     const [filter, setFilter] = useState('')
     const [resetPaginationToggle, setResetPaginationToggle] = useState(false)
@@ -31,13 +34,19 @@ export const Table = ({ data, cols, filterChoice, filterLabel }) => {
                 setFilter('');
             }
         };
+
         return (
-            <>
+            <div className='grid3x1'>
+                <AddButton type={type} addNew={addNew}/>
                 <Export data={data} />
-                <FilterComponent label={filterLabel} onFilter={e => setFilter(e.target.value)} filterText={filter} onClear={handleClear} />
-            </>)
+                <FilterComponent
+                    label={filterLabel}
+                    onFilter={e => setFilter(e.target.value)}
+                    filterText={filter}
+                    onClear={handleClear} />
+            </div>)
     }
-        , [data, filter, resetPaginationToggle, filterLabel]);
+        , [data, filter, resetPaginationToggle, filterLabel, type, addNew]);
 
     return (
         <>

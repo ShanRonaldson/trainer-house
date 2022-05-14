@@ -31,6 +31,18 @@ export const Footer = () => {
                             Material UI
                         </a>
                     </div>
+                    <div className="footer__content">
+                        <a href="https://sweetalert2.github.io/"
+                            className="footer__link" target='_blank' rel="noreferrer">
+                            Sweetalert2 (Modal popover)
+                        </a>
+                    </div>
+                    <div className="footer__content">
+                        <a href="https://codesandbox.io/s/o1005xv1q?file=/src/index.js:194-233"
+                            className="footer__link" target='_blank' rel="noreferrer">
+                            Form modal Sandbox Code thanks to lucassus
+                        </a>
+                    </div>
                 </div>
                 <div className="footer__section flexMarginAuto">
                     <ColNav />
