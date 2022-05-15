@@ -1,5 +1,5 @@
-import sunflower from './../imgs/sunflower.png'
-
+import { Calendar } from '../Components/Calendar'
+import { Chart } from '../Components/Chart'
 
 export const Home = () => {
 
@@ -8,11 +8,12 @@ export const Home = () => {
             <h1 className="home__header">
                 Welcome to Beautiful Sunflower Athletic House
             </h1>
-            <div className="home__content">
-                Click the links above to see our customers and trainings available
+            <div className='calendar__wrapper'>
+                <Calendar />
             </div>
-            <div>
-                <img src={sunflower} alt="logo" className='logo__large' />
+
+            <div className="chart__wrapper">
+                <Chart />
             </div>
         </div>
     )

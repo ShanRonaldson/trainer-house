@@ -43,6 +43,24 @@ export const Footer = () => {
                             Form modal Sandbox Code thanks to lucassus
                         </a>
                     </div>
+                    <div className="footer__content">
+                        <a href="https://lodash.com/"
+                            className="footer__link" target='_blank' rel="noreferrer">
+                           Lodash
+                        </a>
+                    </div>
+                    <div className="footer__content">
+                        <a href="https://recharts.org/en-US"
+                            className="footer__link" target='_blank' rel="noreferrer">
+                           Recharts
+                        </a>
+                    </div>
+                    <div className="footer__content">
+                        <a href="https://fullcalendar.io/"
+                            className="footer__link" target='_blank' rel="noreferrer">
+                           fullCalendar
+                        </a>
+                    </div>
                 </div>
                 <div className="footer__section flexMarginAuto">
                     <ColNav />

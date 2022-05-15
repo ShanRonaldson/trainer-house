@@ -81,7 +81,7 @@ export const AddTraining = ({ onCancel, onClose, addNew }) => {
             <div className="form__input--wrapper">
                 <FormControl>
                     <InputLabel htmlFor="date">Date</InputLabel>
-                    <Input id="date" required onChange={e => setDate(e.target.value)} />
+                    <Input id="date"  type='date' required onChange={e => setDate(e.target.value)} />
                 </FormControl>
 
                 <FormControl>
