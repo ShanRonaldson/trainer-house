@@ -40,8 +40,7 @@ export const Chart = () => {
     }
 
     // format the training data
-
-    const formatData = () => {
+    if (ready) {
         let groupedData = []
         let chartData = []
 
@@ -56,20 +55,14 @@ export const Chart = () => {
         )
         setData(chartData)
         setReady(false)
-
-
-
     }
 
     //get the training data
     useEffect(() => {
 
         fetchData();
-        if (ready) {
-            formatData()
-        }
 
-    }, [ready])
+    }, [])
 
     return (
         <div className="colFlex flexJCC flexAC">
